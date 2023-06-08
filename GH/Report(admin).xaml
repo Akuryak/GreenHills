@@ -1,0 +1,42 @@
+﻿<Page x:Class="GH.Report_admin_"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GH"
+      mc:Ignorable="d" 
+      d:DesignHeight="610" d:DesignWidth="510"
+      Title="Report_admin_" Background="#D9D9D9" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="4" Background="#50CE3B" Opacity="0.10"/>
+        <Label Content="Отчеты" Grid.ColumnSpan="3" FontSize="35" Foreground="#3C9755" Margin="10,0,0,0" Grid.Row="0"/>
+        <Image Source="\Resourses\nameuser.png" Grid.ColumnSpan="4" Grid.Row="0" Margin="130,18,100,18"/>
+        <Label x:Name="nameuser" Grid.Row="0" Margin="290,18,10,18" Grid.ColumnSpan="4" Content="Шакирова Эвелина" FontSize="18"/>
+        <Label Content="Отчеты о сделках с:" Grid.ColumnSpan="2" Grid.Row="2" FontSize="14"/>
+        <DatePicker x:Name="StartDatePicker" Grid.Row="2" Grid.Column="1" Margin="5" SelectedDateChanged="StartDatePicker_SelectedDateChanged"/>
+        <Label Content="по:" Grid.Column="2" Grid.Row="2" FontSize="14"/>
+        <DatePicker x:Name="EndDatePicker" Grid.Row="2" Grid.ColumnSpan="4" Margin="285,5,100,5" SelectedDateChanged="EndDatePicker_SelectedDateChanged"/>
+        <ComboBox x:Name="Realtor_combobox" Grid.Row="3" Grid.ColumnSpan="2" Margin="5" SelectedIndex="0" SelectionChanged="Realtor_combobox_SelectionChanged">
+            <ComboBoxItem>
+                <TextBlock Text="Вывод всех диапозонов"/>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <ListBox x:Name="ContractListBox" Grid.Row="4" Grid.ColumnSpan="4" HorizontalContentAlignment="Stretch"/>
+    </Grid>
+</Page>

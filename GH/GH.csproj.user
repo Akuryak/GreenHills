@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddClient%28realtor%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddDocunent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddObjectPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddRealtor%28admin%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin%28cabinet%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BuyDocument.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cabinet%28realtor%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Client%28cabinet%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Client%28realtor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ComePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Document%28realtor%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Favorite%28client%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FilterObjectPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ListRealtor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Object%28realtor.admin%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PersonalDoc.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Realtor%28cabinet%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegistrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Report%28admin%29.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SaleDocument.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ContractInfoUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\RealtorsInfoUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddClient%28realtor%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddDocunent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddObjectPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddRealtor%28admin%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin%28cabinet%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BuyDocument.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cabinet%28realtor%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Client%28cabinet%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Client%28realtor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ComePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Document%28realtor%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Favorite%28client%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FilterObjectPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ListRealtor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Object%28realtor.admin%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PersonalDoc.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Realtor%28cabinet%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RegistrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Report%28admin%29.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SaleDocument.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ContractInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\RealtorsInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

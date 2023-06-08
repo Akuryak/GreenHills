@@ -1,0 +1,166 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Object\object1.jpg" />
+    <None Remove="Object\object10.jpg" />
+    <None Remove="Object\object11.jpg" />
+    <None Remove="Object\object12.jpg" />
+    <None Remove="Object\object13.jpg" />
+    <None Remove="Object\object14.jpg" />
+    <None Remove="Object\object15.jpg" />
+    <None Remove="Object\object16.jpg" />
+    <None Remove="Object\object17.jpg" />
+    <None Remove="Object\object18.jpg" />
+    <None Remove="Object\object19.jpg" />
+    <None Remove="Object\object2.jpg" />
+    <None Remove="Object\object20.jpg" />
+    <None Remove="Object\object21.jpg" />
+    <None Remove="Object\object22.jpg" />
+    <None Remove="Object\object23.jpg" />
+    <None Remove="Object\object24.jpg" />
+    <None Remove="Object\object25.jpg" />
+    <None Remove="Object\object26.jpg" />
+    <None Remove="Object\object27.jpg" />
+    <None Remove="Object\object28.jpg" />
+    <None Remove="Object\object29.jpg" />
+    <None Remove="Object\object3.jpg" />
+    <None Remove="Object\object30.jpg" />
+    <None Remove="Object\object31.jpg" />
+    <None Remove="Object\object32.jpg" />
+    <None Remove="Object\object33.jpg" />
+    <None Remove="Object\object34.jpg" />
+    <None Remove="Object\object35.jpg" />
+    <None Remove="Object\object36.jpg" />
+    <None Remove="Object\object37.jpg" />
+    <None Remove="Object\object38.jpg" />
+    <None Remove="Object\object39.jpg" />
+    <None Remove="Object\object4.jpg" />
+    <None Remove="Object\object40.jpg" />
+    <None Remove="Object\object5.jpg" />
+    <None Remove="Object\object6.jpg" />
+    <None Remove="Object\object7.jpg" />
+    <None Remove="Object\object8.jpg" />
+    <None Remove="Object\object9.jpg" />
+    <None Remove="Resourses\add-house.png" />
+    <None Remove="Resourses\addClient.png" />
+    <None Remove="Resourses\addDocument.png" />
+    <None Remove="Resourses\addob%28add%29.png" />
+    <None Remove="Resourses\cabinet.png" />
+    <None Remove="Resourses\client.png" />
+    <None Remove="Resourses\delete%28add%29.png" />
+    <None Remove="Resourses\delete.png" />
+    <None Remove="Resourses\Doc%28realtor%29.png" />
+    <None Remove="Resourses\documents.png" />
+    <None Remove="Resourses\eye.png" />
+    <None Remove="Resourses\favorites.png" />
+    <None Remove="Resourses\filter.png" />
+    <None Remove="Resourses\hearts.png" />
+    <None Remove="Resourses\icon.png" />
+    <None Remove="Resourses\mp%28doc%29.png" />
+    <None Remove="Resourses\mp%28object1%29.png" />
+    <None Remove="Resourses\mp%28search%29.png" />
+    <None Remove="Resourses\mp%28staff1%29.png" />
+    <None Remove="Resourses\nameuser.png" />
+    <None Remove="Resourses\object.png" />
+    <None Remove="Resourses\PersonalDoc.png" />
+    <None Remove="Resourses\power.png" />
+    <None Remove="Resourses\realtor(2).png" />
+    <None Remove="Resourses\realtor.png" />
+    <None Remove="Resourses\report.png" />
+    <None Remove="Resourses\search.png" />
+    <None Remove="Resourses\settings.png" />
+    <None Remove="Resourses\show.png" />
+    <None Remove="Resourses\trash.png" />
+    <None Remove="Resourses\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Object\object1.jpg" />
+    <Resource Include="Object\object10.jpg" />
+    <Resource Include="Object\object11.jpg" />
+    <Resource Include="Object\object12.jpg" />
+    <Resource Include="Object\object13.jpg" />
+    <Resource Include="Object\object14.jpg" />
+    <Resource Include="Object\object15.jpg" />
+    <Resource Include="Object\object16.jpg" />
+    <Resource Include="Object\object17.jpg" />
+    <Resource Include="Object\object18.jpg" />
+    <Resource Include="Object\object19.jpg" />
+    <Resource Include="Object\object2.jpg" />
+    <Resource Include="Object\object20.jpg" />
+    <Resource Include="Object\object21.jpg" />
+    <Resource Include="Object\object22.jpg" />
+    <Resource Include="Object\object23.jpg" />
+    <Resource Include="Object\object24.jpg" />
+    <Resource Include="Object\object25.jpg" />
+    <Resource Include="Object\object26.jpg" />
+    <Resource Include="Object\object27.jpg" />
+    <Resource Include="Object\object28.jpg" />
+    <Resource Include="Object\object29.jpg" />
+    <Resource Include="Object\object3.jpg" />
+    <Resource Include="Object\object30.jpg" />
+    <Resource Include="Object\object31.jpg" />
+    <Resource Include="Object\object32.jpg" />
+    <Resource Include="Object\object33.jpg" />
+    <Resource Include="Object\object34.jpg" />
+    <Resource Include="Object\object35.jpg" />
+    <Resource Include="Object\object36.jpg" />
+    <Resource Include="Object\object37.jpg" />
+    <Resource Include="Object\object38.jpg" />
+    <Resource Include="Object\object39.jpg" />
+    <Resource Include="Object\object4.jpg" />
+    <Resource Include="Object\object40.jpg" />
+    <Resource Include="Object\object5.jpg" />
+    <Resource Include="Object\object6.jpg" />
+    <Resource Include="Object\object7.jpg" />
+    <Resource Include="Object\object8.jpg" />
+    <Resource Include="Object\object9.jpg" />
+    <Resource Include="Resourses\add-house.png" />
+    <Resource Include="Resourses\addClient.png" />
+    <Resource Include="Resourses\addDocument.png" />
+    <Resource Include="Resourses\addob(add).png" />
+    <Resource Include="Resourses\cabinet.png" />
+    <Resource Include="Resourses\client.png" />
+    <Resource Include="Resourses\delete(add).png" />
+    <Resource Include="Resourses\delete.png" />
+    <Resource Include="Resourses\Doc(realtor).png" />
+    <Resource Include="Resourses\documents.png" />
+    <Resource Include="Resourses\eye.png" />
+    <Resource Include="Resourses\favorites.png" />
+    <Resource Include="Resourses\filter.png" />
+    <Resource Include="Resourses\hearts.png" />
+    <Resource Include="Resourses\icon.png" />
+    <Resource Include="Resourses\mp(doc).png" />
+    <Resource Include="Resourses\mp(object1).png" />
+    <Resource Include="Resourses\mp(staff1).png" />
+    <Resource Include="Resourses\nameuser.png" />
+    <Resource Include="Resourses\object.png" />
+    <Resource Include="Resourses\PersonalDoc.png" />
+    <Resource Include="Resourses\power.png" />
+    <Resource Include="Resourses\realtor%282%29.png" />
+    <Resource Include="Resourses\realtor.png" />
+    <Resource Include="Resourses\report.png" />
+    <Resource Include="Resourses\search.png" />
+    <Resource Include="Resourses\settings.png" />
+    <Resource Include="Resourses\show.png" />
+    <Resource Include="Resourses\trash.png" />
+    <Resource Include="Resourses\user.png" />
+  </ItemGroup>
+
+</Project>
