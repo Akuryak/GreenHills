@@ -37,6 +37,8 @@ namespace GH
                 deliterealtor_button.Visibility = Visibility.Collapsed;
             }
 
+            nameuser.Content = Staff.FullName;
+
             Refresh();
         }
 

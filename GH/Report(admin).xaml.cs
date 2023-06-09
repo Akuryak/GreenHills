@@ -22,9 +22,11 @@ namespace GH
     /// </summary>
     public partial class Report_admin_ : Page
     {
-        public Report_admin_()
+        public static staff Staff { get; set; }
+        public Report_admin_(staff staff)
         {
             InitializeComponent();
+            Staff = staff;
         }
 
         public void Refresh()
@@ -72,6 +74,8 @@ namespace GH
                 ComboBoxItem item = new ComboBoxItem() { Content = $"{staff.SurnameStaff} {staff.NameStaff} {staff.PatronymicStaff}" };
                 Realtor_combobox.Items.Add(item);
             }
+
+            nameuser.Content = Staff.FullName;
 
             Refresh();
         }

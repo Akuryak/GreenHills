@@ -35,7 +35,7 @@ namespace GH
 
         private void report_button_Click(object sender, RoutedEventArgs e)
         {
-            Admin.Navigate(new Report_admin_());
+            Admin.Navigate(new Report_admin_(Staff));
         }
 
         private void power_button_Click(object sender, RoutedEventArgs e)
