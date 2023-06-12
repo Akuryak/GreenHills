@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
       d:DesignHeight="610" d:DesignWidth="510"
-      Title="AddObjectPage" Background="#D9D9D9">
+      Title="AddObjectPage" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -40,7 +40,7 @@
         <Label Content="Жилая площадь:" Grid.Row="3" Grid.Column="0" Margin="15,130,134,60"/>
         <TextBox x:Name="square_textbox" Grid.Row="3" Grid.Column="0" Margin="125,135,20,65"/>
         <Label Content="Площадь участка :" Grid.Row="3" Grid.Column="1" Margin="15,27,123,160"/>
-        <TextBox x:Name="plotArea_textbox" Grid.Row="3" Grid.Column="1" Margin="130,30,30,170"/>
+        <TextBox x:Name="plotArea_textbox" IsEnabled="False" Grid.Row="3" Grid.Column="1" Margin="130,30,30,170"/>
         <Label Content="Этаж:" Grid.Row="3" Grid.Column="1" Margin="15,60,150,130"/>
         <TextBox x:Name="floor_textbox" Grid.Row="3" Grid.Column="1" Margin="60,63,110,135"/>
         <Label Content="Количество комнат:" Grid.Row="3" Grid.Column="1" Margin="15,90,100,100"/>

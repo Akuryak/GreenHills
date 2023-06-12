@@ -85,7 +85,7 @@ namespace GH
                         break;
 
                     case 2:
-                        PageManagerClass.MainFrame.Navigate(new Realtor_cabinet_());
+                        PageManagerClass.MainFrame.Navigate(new Realtor_cabinet_(staff));
                         break;
 
                     default:
@@ -99,11 +99,11 @@ namespace GH
                 switch (client.Role)
                 {
                     case 3:
-                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_());
+                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_(staff));
                         break;
 
                     case 4:
-                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_());
+                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_(staff));
                         break;
 
                     default:

@@ -73,6 +73,15 @@
     <Compile Update="UserControls\ContractInfoUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\ContractCanOpenedInfoUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ObjectInfoUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\ClientInfoUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\RealtorsInfoUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -145,6 +154,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\ContractInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ContractCanOpenedInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ObjectInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ClientInfoUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\RealtorsInfoUserControl.xaml">

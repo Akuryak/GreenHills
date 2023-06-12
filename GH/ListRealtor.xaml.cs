@@ -59,7 +59,7 @@ namespace GH
 
         private void addrealtor_button_Click(object sender, RoutedEventArgs e)
         {
-            PageManagerClass.MainFrame.Navigate(new AddRealtor_admin_());
+            PageManagerClass.MainFrame.Navigate(new AddRealtor_admin_(Staff));
 
             //при выводе у всех риэлторов фото Resourses/realtor(2).png
             //клиент просмотр и поиск

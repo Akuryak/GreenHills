@@ -19,5 +19,24 @@ namespace GH.Model
         public virtual Object IdObjectContractNavigation { get; set; }
         public virtual staff IdStaffContractNavigation { get; set; }
         public virtual Typecontract TypeContractNavigation { get; set; }
+
+        public Contract()
+        {
+        }
+
+        public Contract(int idContract, int idByerContract, int idObjectContract, int idStaffContract, DateTime dateConclusionContract, DateTime validUntilContract, int typeContract, Client idByerContractNavigation, Object idObjectContractNavigation, staff idStaffContractNavigation, Typecontract typeContractNavigation)
+        {
+            IdContract = idContract;
+            IdByerContract = idByerContract;
+            IdObjectContract = idObjectContract;
+            IdStaffContract = idStaffContract;
+            DateConclusionContract = dateConclusionContract;
+            ValidUntilContract = validUntilContract;
+            TypeContract = typeContract;
+            IdByerContractNavigation = idByerContractNavigation;
+            IdObjectContractNavigation = idObjectContractNavigation;
+            IdStaffContractNavigation = idStaffContractNavigation;
+            TypeContractNavigation = typeContractNavigation;
+        }
     }
 }

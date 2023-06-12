@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
       d:DesignHeight="610" d:DesignWidth="510"
-      Title="Cabinet_realtor_" Background="#D9D9D9">
+      Title="Cabinet_realtor_" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -23,8 +23,11 @@
         <Image Source="\Resourses\nameuser.png" Grid.Row="1" Margin="130,18,100,18"/>
         <Label x:Name="nameuser" Grid.Row="1" Margin="290,18,10,18" Content="Шакирова Эвелина" FontSize="18"/>
         <Grid Grid.Row="3" Grid.ColumnSpan="2" Background="#C8C6C6"  Margin="10"/>
+        <TextBlock x:Name="ClientsCountTextBlock" Text="Кол-во" Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0"/>
         <Grid Grid.Row="4" Grid.ColumnSpan="2" Background="#C8C6C6"  Margin="10"/>
+        <TextBlock x:Name="ObjectsCountTextBlock" Text="Кол-во" Grid.Row="4" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0"/>
         <Grid Grid.Row="5" Grid.ColumnSpan="2" Background="#C8C6C6"  Margin="10"/>
+        <TextBlock x:Name="DocumentsCountTextBlock" Text="Кол-во" Grid.Row="5" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0"/>
         <Label Content="Клиентов в работе" Grid.Row="3" Margin="10,20,250,20" FontSize="20"/>
         <Label Content="Объектов в работе" Grid.Row="4" Margin="10,20,250,20" FontSize="20"/>
         <Label Content="Заключенные договора" Grid.Row="5" Margin="10,20,250,20" FontSize="20"/>

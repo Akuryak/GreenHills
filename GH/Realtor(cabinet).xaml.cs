@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GH.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,34 +21,36 @@ namespace GH
     /// </summary>
     public partial class Realtor_cabinet_ : Page
     {
-        public Realtor_cabinet_()
+        public static staff Staff { get; set; }
+        public Realtor_cabinet_(staff staff)
         {
             InitializeComponent();
+            Staff = staff;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Realtor.Navigate(new Cabinet_realtor_());
+            Realtor.Navigate(new Cabinet_realtor_(Staff));
         }
 
         private void cabinet_button_Click(object sender, RoutedEventArgs e)
         {
-            Realtor.Navigate(new Cabinet_realtor_());
+            Realtor.Navigate(new Cabinet_realtor_(Staff));
         }
 
         private void object_button_Click(object sender, RoutedEventArgs e)
         {
-            Realtor.Navigate(new Object_realtor());
+            Realtor.Navigate(new Object_realtor(Staff, App.Context.Objects.ToList()));
         }
 
         private void client_button_Click(object sender, RoutedEventArgs e)
         {
-            Realtor.Navigate(new Client_realtor());
+            Realtor.Navigate(new Client_realtor(Staff));
         }
 
         private void documents_button_Click(object sender, RoutedEventArgs e)
         {
-            Realtor.Navigate(new Document_realtor_());
+            Realtor.Navigate(new Document_realtor_(Staff));
         }
 
         private void power_button_Click(object sender, RoutedEventArgs e)

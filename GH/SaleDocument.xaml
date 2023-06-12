@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
       d:DesignHeight="610" d:DesignWidth="510"
-      Title="SaleDocument" Background="#D9D9D9">
+      Title="SaleDocument" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,12 +25,9 @@
         <Label Content="по продаже объекта недвижимости" Grid.Row="2" FontSize="15" HorizontalAlignment="Center" Margin="0,30,0,112"/>
         <Label Content="№" HorizontalAlignment="Left" Grid.Row="2" Margin="12,60,0,82"/>
         <Label x:Name="number_label" Grid.Row="2" Margin="40,60,400,82"/>
-        <!--для номера дооговора-->
         <Label Content="г." HorizontalAlignment="Left" Grid.Row="2" Margin="12,70,0,62"/>
         <Label x:Name="city_label" Grid.Row="2" Margin="40,60,400,82"/>
-        <!--для города-->
         <Label x:Name="data_label" Margin="390,60,20,82" Grid.Row="2"/>
-        <!--для даты заключения-->
         <Label  Grid.Row="2" Margin="15,90,15,12" FontSize="12">
             <Label.Content>
                 <TextBlock TextWrapping="Wrap">Агентство недвижимости “Green Hills”, действующее под управлением ООО “Hills”.
@@ -38,14 +35,12 @@
             </Label.Content>
         </Label>
         <Label x:Name="nameAndSurnameClient_label" Grid.Row="2" Margin="164,123,192,21" FontSize="14"/>
-        <!--для имени и фамилии клиента-->
         <Label  Grid.Row="2" Margin="318,125,58,19" FontSize="12">
             <Label.Content>
                 <TextBlock TextWrapping="Wrap">, паспорт РФ серии/№</TextBlock>
             </Label.Content>
         </Label>
         <Label x:Name="requisitesClient_label" Grid.Row="2" Margin="15,142,416,2"/>
-        <!--для паспортных данных клиента-->
 
         <Label  Grid.Row="2" Margin="83,142,28,5" FontSize="12">
             <Label.Content>
@@ -67,25 +62,21 @@
             </Label.Content>
         </Label>
         <Label x:Name="typeObject_label" Grid.Row="3" Margin="376,70,50,212" FontSize="14"/>
-        <!--для типа обьекта-->
         <Label  Grid.Row="3" Margin="15,83,168,196" FontSize="12">
             <Label.Content>
                 <TextBlock TextWrapping="Wrap">, (далее по тексту “Объект”), расположенного по адресу:</TextBlock>
             </Label.Content>
         </Label>
         <Label x:Name="addressObject_label" Grid.Row="3" Margin="332,82,28,192" FontSize="13"/>
-        <!--для адреса обьекта-->
         <Label  Grid.Row="3" Margin="18,101,18,154" FontSize="12">
             <Label.Content>
                 <TextBlock TextWrapping="Wrap">1.2 Цена Объекта на продажу, на момент заключения настоящего Договора состовляет:</TextBlock>
             </Label.Content>
         </Label>
         <Label x:Name="costObject" Grid.Row="3" FontSize="13" Margin="84,117,316,154"/>
-        <!--для цены объекта-->
         <Label Content="рублей." Grid.Row="3" FontSize="12"  Margin="152,118,284,154"/>
         <Label Content="1.3 Срок действия настоящего Договора - до" Grid.Row="3" Margin="15,131,220,149"/>
         <Label x:Name="validUntil_label" Grid.Row="3" Margin="270,128,162,150" FontSize="13"/>
-        <!--для срока действия договора-->
         <Label Content=" 2. Порядок расчетов"  HorizontalAlignment="Left" Margin="165,146,0,130" Grid.Row="3"/>
         <Label  Grid.Row="3" Margin="15,159,20,90" FontSize="12">
             <Label.Content>
@@ -102,7 +93,7 @@
         </Label>
         <Label  FontWeight="Black" Grid.Row="3" Margin="54,243,271,34" FontSize="12" x:Name="RealtorName_label"/>
         <!--для фио риэлтора-->
-        <Label FontWeight="Black" Grid.Row="3" Margin="300,236,28,41" FontSize="12"/>
+        <Label FontWeight="Black" Grid.Row="3" Margin="300,236,28,41" FontSize="12" x:Name="BuyerName_label"/>
         <!--для имени покупателя-->
 
         <Label  Grid.Row="3" Margin="260,220,86,10" FontSize="12">

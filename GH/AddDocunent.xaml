@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
       d:DesignHeight="610" d:DesignWidth="510"
-      Title="AddDocunent" Background="#D9D9D9">
+      Title="AddDocunent" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>

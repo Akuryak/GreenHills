@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GH.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,20 @@ namespace GH
     /// </summary>
     public partial class Cabinet_realtor_ : Page
     {
-        public Cabinet_realtor_()
+        public static staff Staff { get; set; }
+        public Cabinet_realtor_(staff staff)
         {
             InitializeComponent();
+            Staff = staff;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            nameuser.Content = Staff.FullName;
+
+            ClientsCountTextBlock.Text = App.Context.Clients.ToList().Count.ToString();
+            ObjectsCountTextBlock.Text = App.Context.Objects.ToList().Count.ToString();
+            DocumentsCountTextBlock.Text = App.Context.Contracts.ToList().Count.ToString();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GH.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,36 @@ namespace GH
     /// </summary>
     public partial class BuyDocument : Page
     {
-        public BuyDocument()
+        public static staff Staff { get; set; }
+        public static Contract Contract { get; set; }
+        public BuyDocument(staff staff, Contract contract)
         {
             InitializeComponent();
+            Staff = staff;
+            Contract = contract;
         }
 
         private void ready_button_Click(object sender, RoutedEventArgs e)
         {
+            PageManagerClass.MainFrame.Navigate(new Realtor_cabinet_(Staff));
+        }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Staff != null)
+                nameuser.Content = Staff.FullName;
+
+            number_label.Content = Contract.IdContract;
+            city_label.Content = Contract.IdObjectContractNavigation.CityObject;
+            data_label.Content = Contract.DateConclusionContract;
+            nameAndSurnameClient_label.Content = $"{Contract.IdByerContractNavigation.SurnameClient} {Contract.IdByerContractNavigation.NameClient}";
+            requisitesClient_label.Content = Contract.IdByerContractNavigation.RequisitesClient;
+            typeObject_label.Content = Contract.IdObjectContractNavigation.TypeObjectNavigation.NameTypeObject;
+            addressObject_label.Content = $"г. {Contract.IdObjectContractNavigation.CityObject} ул. {Contract.IdObjectContractNavigation.AddressObject}";
+            costObject.Content = Contract.IdObjectContractNavigation.PriceObject;
+            validUntil_label.Content = Contract.ValidUntilContract;
+            RealtorName_label.Content = Contract.StaffFullName;
+            BuyerName_label.Content = Contract.BuyerFullName;
         }
     }
 }

@@ -204,3 +204,9 @@ C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\refint\GH.dll
 C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\GH.pdb
 C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\GH.genruntimeconfig.cache
 C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\ref\GH.dll
+C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\UserControls\ObjectInfoUserControl.g.cs
+C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\UserControls\ObjectInfoUserControl.baml
+C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\UserControls\ClientInfoUserControl.g.cs
+C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\UserControls\ContractCanOpenedInfoUserControl.g.cs
+C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\UserControls\ClientInfoUserControl.baml
+C:\Users\Daunello\Desktop\курсач\GH\obj\Debug\net5.0-windows\UserControls\ContractCanOpenedInfoUserControl.baml

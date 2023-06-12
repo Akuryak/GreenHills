@@ -28,5 +28,24 @@ namespace GH.Model
         public virtual Client IdSobObjectNavigation { get; set; }
         public virtual Typeobject TypeObjectNavigation { get; set; }
         public virtual ICollection<Contract> Contracts { get; set; }
+
+        public Object(int idObject, int typeObject, decimal priceObject, int? numRoomsObject, string livingAreaObject, string plotAreaObject, int? floorObject, int idSobObject, string cityObject, string districtObject, string addressObject, string imagesObject, Client idSobObjectNavigation, Typeobject typeObjectNavigation, ICollection<Contract> contracts)
+        {
+            IdObject = idObject;
+            TypeObject = typeObject;
+            PriceObject = priceObject;
+            NumRoomsObject = numRoomsObject;
+            LivingAreaObject = livingAreaObject;
+            PlotAreaObject = plotAreaObject;
+            FloorObject = floorObject;
+            IdSobObject = idSobObject;
+            CityObject = cityObject;
+            DistrictObject = districtObject;
+            AddressObject = addressObject;
+            ImagesObject = imagesObject;
+            IdSobObjectNavigation = idSobObjectNavigation;
+            TypeObjectNavigation = typeObjectNavigation;
+            Contracts = contracts;
+        }
     }
 }

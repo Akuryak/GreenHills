@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GH.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,32 +21,68 @@ namespace GH
     /// </summary>
     public partial class AddDocunent : Page
     {
-        public AddDocunent()
+        public static staff Staff { get; set; }
+        public static string ContractType { get; set; } = "Купли";
+        public AddDocunent(staff staff)
         {
             InitializeComponent();
+            Staff = staff;
         }
 
         private void buyerDoc_button_Click(object sender, RoutedEventArgs e)
         {
-            //выбор типа документа можно реализовать в combobox 
+            ContractType = "Купли";
+            buyerDoc_button.IsEnabled = false;
+            sobDoc_button.IsEnabled = true;
         }
 
         private void sobDoc_button_Click(object sender, RoutedEventArgs e)
         {
-
+            ContractType = "Продажи";
+            buyerDoc_button.IsEnabled = true;
+            sobDoc_button.IsEnabled = false;
         }
 
         private void addDoc_button_Click(object sender, RoutedEventArgs e)
         {
-            //в зависимости от типа разные договоры
-            //переход на страничку либо на договор купли либо на договор продажи
-           // PageManagerClass.MainFrame.Navigate(new BuyDocument());
+            if (!int.TryParse(Byer_textbox.Text, out int buyerId) || !int.TryParse(Sob_textbox.Text, out int ownerId) || !int.TryParse(Object_textbox.Text, out int objectId))
+            {
+                MessageBox.Show("Введите корректные ID покупателя и собственника", "Ошибка");
+                return;
+            }
 
+            if (App.Context.Clients.ToList().FirstOrDefault(x=>x.IdClient == buyerId) == null || App.Context.Clients.ToList().FirstOrDefault(x => x.IdClient == ownerId) == null || App.Context.Objects.ToList().FirstOrDefault(x => x.IdObject == objectId) == null)
+            {
+                MessageBox.Show("Покупатель, собственник или объект с таким ID не найден", "Ошибка");
+                return;
+            }
+
+            Contract contract = new Contract();
+            try
+            {
+                contract = new Contract(App.Context.Contracts.ToList().Max(x => x.IdContract) + 1, App.Context.Clients.ToList().FirstOrDefault(x => x.IdClient == buyerId).IdClient, App.Context.Objects.ToList().FirstOrDefault(x => x.IdObject == objectId).IdObject, App.Context.Clients.ToList().FirstOrDefault(x => x.IdClient == ownerId).IdClient, (DateTime)dateConclusion_data.SelectedDate, (DateTime)validUntil_data.SelectedDate, ContractType == "Купли" ? 1 : 2, null, null, null, null);
+                App.Context.Contracts.Add(contract);
+                App.Context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка при добавлении договора, проверьте правильность ID. Ошибка: {ex.Message}", "Ошибка");
+            }
+
+            if (ContractType == "Купли")
+                PageManagerClass.MainFrame.Navigate(new BuyDocument(Staff, contract));
+            else if (ContractType == "Продажи")
+                PageManagerClass.MainFrame.Navigate(new SaleDocument(Staff, contract));
         }
 
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
+            PageManagerClass.MainFrame.Navigate(new AddDocunent(Staff));
+        }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            nameuser.Content = Staff.FullName;
         }
     }
 }

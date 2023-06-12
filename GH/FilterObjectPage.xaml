@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
       d:DesignHeight="610" d:DesignWidth="510"
-      Title="FilterObjectPage" Background="#D9D9D9">
+      Title="FilterObjectPage" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -38,8 +38,8 @@
         <TextBox x:Name="squareFrom_textbox" Grid.Row="3" Grid.Column="0" Margin="125,75,90,105" Text="от"/>
         <TextBox x:Name="squareBefore_textbox" Grid.Row="3" Grid.Column="0" Margin="175,75,40,105" Text="до"/>
         <Label Content="Площадь участка :" Grid.Row="3" Grid.Column="1" Margin="5,27,130,140"/>
-        <TextBox x:Name="plotAreaFrom_textbox" Grid.Row="3" Grid.Column="1" Margin="130,30,80,145" Text="от"/>
-        <TextBox x:Name="plotAreaBefore_textbox" Grid.Row="3" Grid.Column="1" Margin="180,30,20,145" Text="до"/>
+        <TextBox x:Name="plotAreaFrom_textbox" IsEnabled="False" Grid.Row="3" Grid.Column="1" Margin="130,30,80,145" Text="от"/>
+        <TextBox x:Name="plotAreaBefore_textbox" IsEnabled="False" Grid.Row="3" Grid.Column="1" Margin="180,30,20,145" Text="до"/>
         <Label Content="Этаж:" Grid.Row="3" Grid.Column="1" Margin="15,60,180,110"/>
         <TextBox x:Name="floorFrom_textbox" Grid.Row="3" Grid.Column="1" Margin="60,63,135,115" Text="от"/>
         <TextBox x:Name="floorBefore_textbox" Grid.Row="3" Grid.Column="1" Margin="130,63,60,115" Text="до"/>
@@ -54,7 +54,7 @@
         <Label Content="Адрес:" Grid.Row="4" Grid.Column="0" Margin="20,90,180,90"/>
         <TextBox x:Name="address_textbox" Grid.Row="4" Grid.Column="0" Margin="70,95,30,110"/>
 
-        <Button Name="filter_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="140,165,190,20">
+        <Button Name="filter_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="140,165,190,20" Click="filter_button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -65,7 +65,7 @@
                 <Image Source="\Resourses\addob(add).png" Height="25" Width="36"/>
             </StackPanel>
         </Button>
-        <Button Name="clear_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="330,165,10,20">
+        <Button Name="clear_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="330,165,10,20" Click="clear_button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

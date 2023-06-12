@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Daunello\Desktop\курсач\GH\App.xaml
-24214299797
+27146508964
 
-39711399921
+421512068427
 214705486995
-AddClient(realtor).xaml;AddDocunent.xaml;AddObjectPage.xaml;AddRealtor(admin).xaml;Admin(cabinet).xaml;BuyDocument.xaml;Cabinet(realtor).xaml;Client(cabinet).xaml;Client(realtor.xaml;ComePage.xaml;Document(realtor).xaml;Favorite(client).xaml;FilterObjectPage.xaml;ListRealtor.xaml;MainPage.xaml;MainWindow.xaml;Object(realtor.admin).xaml;PersonalDoc.xaml;Realtor(cabinet).xaml;RegistrationPage.xaml;Report(admin).xaml;SaleDocument.xaml;UserControls\ContractInfoUserControl.xaml;UserControls\RealtorsInfoUserControl.xaml;
+AddClient(realtor).xaml;AddDocunent.xaml;AddObjectPage.xaml;AddRealtor(admin).xaml;Admin(cabinet).xaml;BuyDocument.xaml;Cabinet(realtor).xaml;Client(cabinet).xaml;Client(realtor.xaml;ComePage.xaml;Document(realtor).xaml;Favorite(client).xaml;FilterObjectPage.xaml;ListRealtor.xaml;MainPage.xaml;MainWindow.xaml;Object(realtor.admin).xaml;PersonalDoc.xaml;Realtor(cabinet).xaml;RegistrationPage.xaml;Report(admin).xaml;SaleDocument.xaml;UserControls\ClientInfoUserControl.xaml;UserControls\ContractCanOpenedInfoUserControl.xaml;UserControls\ContractInfoUserControl.xaml;UserControls\ObjectInfoUserControl.xaml;UserControls\RealtorsInfoUserControl.xaml;
 
 True
 
