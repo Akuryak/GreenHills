@@ -10,6 +10,7 @@ namespace GH.Model
         public Client()
         {
             Contracts = new HashSet<Contract>();
+            FavoriteClientObjects = new HashSet<FavoriteClientObject>();
             Objects = new HashSet<Object>();
         }
 
@@ -25,11 +26,10 @@ namespace GH.Model
 
         public virtual Role RoleNavigation { get; set; }
         public virtual ICollection<Contract> Contracts { get; set; }
+        public virtual ICollection<FavoriteClientObject> FavoriteClientObjects { get; set; }
         public virtual ICollection<Object> Objects { get; set; }
 
-
-
-        public Client(int idClient, string surnameClient, string nameClient, string patronymicClient, string phoneClient, string passwordClient, string requisitesClient, string emailClient, int role, Role roleNavigation, ICollection<Contract> contracts, ICollection<Object> objects)
+        public Client(int idClient, string surnameClient, string nameClient, string patronymicClient, string phoneClient, string passwordClient, string requisitesClient, string emailClient, int role, Role roleNavigation, ICollection<Contract> contracts, ICollection<FavoriteClientObject> favoriteClientObjects, ICollection<Object> objects)
         {
             IdClient = idClient;
             SurnameClient = surnameClient;
@@ -42,6 +42,7 @@ namespace GH.Model
             Role = role;
             RoleNavigation = roleNavigation;
             Contracts = contracts;
+            FavoriteClientObjects = favoriteClientObjects;
             Objects = objects;
         }
     }

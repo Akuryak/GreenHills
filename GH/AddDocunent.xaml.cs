@@ -70,9 +70,9 @@ namespace GH
             }
 
             if (ContractType == "Купли")
-                PageManagerClass.MainFrame.Navigate(new BuyDocument(Staff, contract));
+                PageManagerClass.MainFrame.Navigate(new BuyDocument(Staff, null, contract));
             else if (ContractType == "Продажи")
-                PageManagerClass.MainFrame.Navigate(new SaleDocument(Staff, contract));
+                PageManagerClass.MainFrame.Navigate(new SaleDocument(Staff, null, contract));
         }
 
         private void clear_button_Click(object sender, RoutedEventArgs e)

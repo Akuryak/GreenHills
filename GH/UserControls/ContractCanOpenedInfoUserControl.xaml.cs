@@ -21,10 +21,14 @@ namespace GH.UserControls
     /// </summary>
     public partial class DocumentInfoUserControl : UserControl
     {
+        public static Client Client { get; set; }
+        public static staff Staff { get; set; }
         public static Contract Contract { get; set; }
-        public DocumentInfoUserControl(Contract contract)
+        public DocumentInfoUserControl(Client client, staff staff, Contract contract)
         {
             InitializeComponent();
+            Client = client;
+            Staff = staff;
             Contract = contract;
 
             ContractTypeTextBlock.Text = contract.StringTypeObject;
@@ -39,11 +43,11 @@ namespace GH.UserControls
         {
             if (Contract.TypeContract == 1)
             {
-                PageManagerClass.MainFrame.Navigate(new BuyDocument(new staff(), Contract));
+                PageManagerClass.MainFrame.Navigate(new BuyDocument(Staff, Client, Contract));
             }
             else if (Contract.TypeContract == 2)
             {
-                PageManagerClass.MainFrame.Navigate(new SaleDocument(new staff(), Contract));
+                PageManagerClass.MainFrame.Navigate(new SaleDocument(Staff, Client, Contract));
             }
         }
     }

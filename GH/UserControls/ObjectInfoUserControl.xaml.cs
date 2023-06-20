@@ -26,6 +26,8 @@ namespace GH.UserControls
         {
             InitializeComponent();
 
+            DataContext = @object;
+
             TypeTextBlock.Text = @object.TypeObjectNavigation.NameTypeObject;
             AddressTextBlock.Text = $"г. {@object.CityObject} р. {@object.DistrictObject}\nул. {@object.AddressObject}";
             FloorTextBlock.Text = @object.FloorObject.ToString() + " этаж";

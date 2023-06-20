@@ -30,7 +30,7 @@ namespace GH
 
         private void realtor_button_Click(object sender, RoutedEventArgs e)
         {
-            Admin.Navigate(new ListRealtor(Staff));
+            Admin.Navigate(new ListRealtor(Staff, null));
         }
 
         private void report_button_Click(object sender, RoutedEventArgs e)
@@ -45,7 +45,7 @@ namespace GH
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Admin.Navigate(new ListRealtor(Staff));
+            Admin.Navigate(new ListRealtor(Staff, null));
         }
     }
 }

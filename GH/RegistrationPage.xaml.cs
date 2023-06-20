@@ -59,7 +59,7 @@ namespace GH
 
             string phone = Phone_textBox.Text.Replace("-", "").Replace("_", "").Replace("(", "").Replace(")", "").Replace(" ", "");
 
-            App.Context.Clients.Add(new Model.Client(App.Context.Clients.ToList().Max(x => x.IdClient) + 1, Surname_textbox.Text.Trim(), Name_textbox.Text.Trim(), Patronymic_textbox.Text.Trim(), phone, password_Box == null ? password_textBox.Text : password_Box.Password, Requisites_textbox.Text, Email_textbox.Text,/* Под сомнениями */ 4, null, null, null));
+            App.Context.Clients.Add(new Model.Client(App.Context.Clients.ToList().Max(x => x.IdClient) + 1, Surname_textbox.Text.Trim(), Name_textbox.Text.Trim(), Patronymic_textbox.Text.Trim(), phone, password_Box == null ? password_textBox.Text : password_Box.Password, Requisites_textbox.Text, Email_textbox.Text,/* Под сомнениями */ 4, null, null, null, null));
             App.Context.SaveChanges();
 
             MessageBox.Show("Вы успешно зарегистрировались", "Уведомление");

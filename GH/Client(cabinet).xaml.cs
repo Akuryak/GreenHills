@@ -22,41 +22,42 @@ namespace GH
     public partial class Client_cabinet_ : Page
     {
         public static staff Staff { get; set; }
-        public Client_cabinet_(staff staff)
+        public static Client Client { get; set; }
+        public Client_cabinet_(staff staff, Client client)
         {
             InitializeComponent();
             Staff = staff;
+            Client = client;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            PageManagerClass.MainFrame = Client;
-            Client.Navigate(new Favorite_client_());
+            ClientFrame.Navigate(new Favorite_client_(Client));
         }
 
         private void favorite_button_Click(object sender, RoutedEventArgs e)
         {
-            Client.Navigate(new Favorite_client_());
+            ClientFrame.Navigate(new Favorite_client_(Client));
         }
 
         private void object_button_Click(object sender, RoutedEventArgs e)
         {
-            Client.Navigate(new Object_realtor(Staff, App.Context.Objects.ToList()));
+            ClientFrame.Navigate(new Object_realtor(Staff, Client, App.Context.Objects.ToList()));
         }
 
         private void realtor_button_Click(object sender, RoutedEventArgs e)
         {
-            Client.Navigate(new ListRealtor(Staff));
+            ClientFrame.Navigate(new ListRealtor(Staff, Client));
         }
 
         private void personalDoc_button_Click(object sender, RoutedEventArgs e)
         {
-            Client.Navigate(new PersonalDoc());
+            ClientFrame.Navigate(new PersonalDoc(Client));
         }
 
         private void power_button_Click(object sender, RoutedEventArgs e)
         {
-
+            PageManagerClass.MainFrame.Navigate(new ComePage());
         }
     }
 }

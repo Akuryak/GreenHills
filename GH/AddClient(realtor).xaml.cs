@@ -53,11 +53,11 @@ namespace GH
                 return;
             }
 
-            App.Context.Clients.Add(new Client(App.Context.Clients.ToList().Max(x=>x.IdClient) + 1, surname_textbox.Text, name_textbox.Text, patronymic_textbox.Text, phone.ToString(), password_textbox.Text, passSeriesAndNumber.ToString(), email_textbox.Text, UserType == "Покупатель" ? 4 : 3, null, null, null));
+            App.Context.Clients.Add(new Client(App.Context.Clients.ToList().Max(x=>x.IdClient) + 1, surname_textbox.Text, name_textbox.Text, patronymic_textbox.Text, phone.ToString(), password_textbox.Text, passSeriesAndNumber.ToString(), email_textbox.Text, UserType == "Покупатель" ? 4 : 3, null, null, null, null));
             App.Context.SaveChanges();
 
             MessageBox.Show("Вы успешно добавили клиента", "Уведомление");
-            PageManagerClass.MainFrame.Navigate(new Client_cabinet_(Staff));
+            PageManagerClass.MainFrame.Navigate(new Client_realtor(Staff));
 
         }
 

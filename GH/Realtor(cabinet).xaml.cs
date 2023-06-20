@@ -40,7 +40,7 @@ namespace GH
 
         private void object_button_Click(object sender, RoutedEventArgs e)
         {
-            Realtor.Navigate(new Object_realtor(Staff, App.Context.Objects.ToList()));
+            Realtor.Navigate(new Object_realtor(Staff, null, App.Context.Objects.ToList()));
         }
 
         private void client_button_Click(object sender, RoutedEventArgs e)

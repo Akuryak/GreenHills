@@ -86,6 +86,35 @@ INSERT INTO `contract` VALUES (1,27,40,3,'2023-04-12','2023-07-12',1),(2,28,39,3
 UNLOCK TABLES;
 
 --
+-- Table structure for table `favorite_client_objects`
+--
+
+DROP TABLE IF EXISTS `favorite_client_objects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `favorite_client_objects` (
+  `Id` int NOT NULL,
+  `Object` int NOT NULL,
+  `Client` int NOT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `Object_idx` (`Object`),
+  KEY `Client_idx` (`Client`),
+  CONSTRAINT `Client` FOREIGN KEY (`Client`) REFERENCES `client` (`id_client`),
+  CONSTRAINT `Object` FOREIGN KEY (`Object`) REFERENCES `object` (`id_object`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `favorite_client_objects`
+--
+
+LOCK TABLES `favorite_client_objects` WRITE;
+/*!40000 ALTER TABLE `favorite_client_objects` DISABLE KEYS */;
+INSERT INTO `favorite_client_objects` VALUES (1,1,1),(3,40,3);
+/*!40000 ALTER TABLE `favorite_client_objects` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `object`
 --
 
@@ -245,4 +274,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-08 17:44:38
+-- Dump completed on 2023-06-20 23:17:26

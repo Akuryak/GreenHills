@@ -22,23 +22,30 @@ namespace GH
     public partial class BuyDocument : Page
     {
         public static staff Staff { get; set; }
+        public static Client Client { get; set; }
         public static Contract Contract { get; set; }
-        public BuyDocument(staff staff, Contract contract)
+        public BuyDocument(staff staff, Client client, Contract contract)
         {
             InitializeComponent();
             Staff = staff;
+            Client = client;
             Contract = contract;
         }
 
         private void ready_button_Click(object sender, RoutedEventArgs e)
         {
-            PageManagerClass.MainFrame.Navigate(new Realtor_cabinet_(Staff));
+            if (Staff != null)
+                PageManagerClass.MainFrame.Navigate(new Realtor_cabinet_(Staff));
+            else if (Client != null)
+                PageManagerClass.MainFrame.Navigate(new Client_cabinet_(Staff, Client));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             if (Staff != null)
                 nameuser.Content = Staff.FullName;
+            else if (Client != null)
+                nameuser.Content = $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}";
 
             number_label.Content = Contract.IdContract;
             city_label.Content = Contract.IdObjectContractNavigation.CityObject;

@@ -6161,11 +6161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daunello\\Desktop\\курсач\\GH\\GH.csproj",
+      "projectUniqueName": "C:\\Users\\Daunello\\source\\repos\\курсач\\GH\\GH.csproj",
       "projectName": "GH",
-      "projectPath": "C:\\Users\\Daunello\\Desktop\\курсач\\GH\\GH.csproj",
+      "projectPath": "C:\\Users\\Daunello\\source\\repos\\курсач\\GH\\GH.csproj",
       "packagesPath": "C:\\Users\\Daunello\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daunello\\Desktop\\курсач\\GH\\obj\\",
+      "outputPath": "C:\\Users\\Daunello\\source\\repos\\курсач\\GH\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daunello\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6250,7 +6250,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -115,7 +115,7 @@ namespace GH
                         return;
                     }
 
-                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, apartmentRoomsCount, apartmentSquare.ToString(), "", apartmentFloor, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null));
+                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, apartmentRoomsCount, apartmentSquare.ToString(), "", apartmentFloor, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null, null));
                     break;
 
                 case "Комната":
@@ -130,7 +130,7 @@ namespace GH
                         return;
                     }
 
-                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, 1, roomSquare.ToString(), "", roomFloor, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null));
+                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, 1, roomSquare.ToString(), "", roomFloor, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null, null));
                     break;
 
                 case "Дом":
@@ -145,7 +145,7 @@ namespace GH
                         return;
                     }
 
-                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, houseRoomsCount, houseLivingSquare.ToString(), housePlotArea.ToString(), houseFloor, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null));
+                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, houseRoomsCount, houseLivingSquare.ToString(), housePlotArea.ToString(), houseFloor, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null, null));
                     break;
 
                 case "Участок":
@@ -160,14 +160,14 @@ namespace GH
                         return;
                     }
 
-                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, 0, "0", plotArea.ToString(), 0, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null));
+                    App.Context.Objects.Add(new Model.Object(App.Context.Objects.ToList().Max(x => x.IdObject) + 1, 1, price, 0, "0", plotArea.ToString(), 0, ownerID, city_textbox.Text, district_textbox.Text, address_textbox.Text, foto_textbox.Text, null, null, null, null));
                     break;
             }
             App.Context.SaveChanges();
 
             MessageBox.Show("Вы успешно добавили объект", "Уведомление");
 
-            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, App.Context.Objects.ToList()));
+            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, null, App.Context.Objects.ToList()));
         }
 
         private void clear_button_Click(object sender, RoutedEventArgs e)

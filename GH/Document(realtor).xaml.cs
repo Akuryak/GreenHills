@@ -42,7 +42,7 @@ namespace GH
             DocumentsListBox.Items.Clear();
             foreach (Contract contract in contracts)
             {
-                DocumentsListBox.Items.Add(new UserControls.DocumentInfoUserControl(contract));
+                DocumentsListBox.Items.Add(new UserControls.DocumentInfoUserControl(null, Staff, contract));
             }
         }
 

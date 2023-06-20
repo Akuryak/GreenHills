@@ -70,6 +70,9 @@
     <Compile Update="SaleDocument.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\ClientObjectUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\ContractInfoUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -151,6 +154,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SaleDocument.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\ClientObjectUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\ContractInfoUserControl.xaml">

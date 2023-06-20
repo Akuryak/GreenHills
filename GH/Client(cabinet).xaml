@@ -61,6 +61,6 @@
             </Button.Resources>
             <Image Source="\Resourses\power.png" Height="68" Width="63"/>
         </Button>
-        <Frame x:Name="Client" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+        <Frame x:Name="ClientFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>
     </Grid>
 </Page>

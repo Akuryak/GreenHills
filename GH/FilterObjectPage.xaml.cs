@@ -22,10 +22,12 @@ namespace GH
     public partial class FilterObjectPage : Page
     {
         public static staff Staff { get; set; }
-        public FilterObjectPage(staff staff)
+        public static Client Client { get; set; }
+        public FilterObjectPage(staff staff, Client client)
         {
             InitializeComponent();
             Staff = staff;
+            Client = client;
         }
 
         private void apartment_button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +40,9 @@ namespace GH
 
             numRoomsFrom_textbox.IsEnabled = true;
             numRoomsBefore_textbox.IsEnabled = true;
+
+            floorFrom_textbox.IsEnabled = true;
+            floorBefore_textbox.IsEnabled = true;
         }
 
         private void room_button_Click(object sender, RoutedEventArgs e)
@@ -53,6 +58,9 @@ namespace GH
 
             plotAreaFrom_textbox.Text = string.Empty;
             plotAreaBefore_textbox.Text = string.Empty;
+
+            floorFrom_textbox.IsEnabled = true;
+            floorBefore_textbox.IsEnabled = true;
         }
 
         private void home_button_Click(object sender, RoutedEventArgs e)
@@ -62,6 +70,9 @@ namespace GH
 
             numRoomsFrom_textbox.IsEnabled = true;
             numRoomsBefore_textbox.IsEnabled = true;
+
+            floorFrom_textbox.IsEnabled = true;
+            floorBefore_textbox.IsEnabled = true;
         }
 
         private void plot_button_Click(object sender, RoutedEventArgs e)
@@ -134,7 +145,7 @@ namespace GH
                 }
                 else
                 {
-                    MessageBox.Show("Корректно заполните поля колличества комнат", "Ошибка");
+                    MessageBox.Show("Корректно заполните поля количества комнат", "Ошибка");
                     return;
                 }
 
@@ -147,17 +158,17 @@ namespace GH
             if (!string.IsNullOrWhiteSpace(address_textbox.Text))
                 objects = objects.Where(x => x.AddressObject.Contains(address_textbox.Text)).ToList();
 
-            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, objects));
+            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, Client, objects));
         }
 
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
-            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, App.Context.Objects.ToList()));
+            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, null, App.Context.Objects.ToList()));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            nameuser.Content = Staff.FullName;
+            nameuser.Content = Staff == null ? $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}" : Staff.FullName;
         }
     }
 }

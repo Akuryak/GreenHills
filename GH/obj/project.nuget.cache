@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rjHKs2TdqdvW3XWS+ijmhIMV9HfGdlmgky+VNJgWGDt7Cy6JqOz8XDsHjtrW8SseFC60LEsU1xNA1GdEPEPfsw==",
+  "dgSpecHash": "bigYwin7nukSmbxIsddE1kyKAljM+Nv5Uy/ZNKJ+YvRBOn/qFPF3vdS7u7PqaKsA/4jT4KxkFZi0bBGp8QygCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daunello\\Desktop\\курсач\\GH\\GH.csproj",
+  "projectFilePath": "C:\\Users\\Daunello\\source\\repos\\курсач\\GH\\GH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daunello\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Daunello\\.nuget\\packages\\extended.wpf.toolkit\\4.5.0\\extended.wpf.toolkit.4.5.0.nupkg.sha512",

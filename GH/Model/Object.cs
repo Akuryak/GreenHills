@@ -10,6 +10,7 @@ namespace GH.Model
         public Object()
         {
             Contracts = new HashSet<Contract>();
+            FavoriteClientObjects = new HashSet<FavoriteClientObject>();
         }
 
         public int IdObject { get; set; }
@@ -28,8 +29,9 @@ namespace GH.Model
         public virtual Client IdSobObjectNavigation { get; set; }
         public virtual Typeobject TypeObjectNavigation { get; set; }
         public virtual ICollection<Contract> Contracts { get; set; }
+        public virtual ICollection<FavoriteClientObject> FavoriteClientObjects { get; set; }
 
-        public Object(int idObject, int typeObject, decimal priceObject, int? numRoomsObject, string livingAreaObject, string plotAreaObject, int? floorObject, int idSobObject, string cityObject, string districtObject, string addressObject, string imagesObject, Client idSobObjectNavigation, Typeobject typeObjectNavigation, ICollection<Contract> contracts)
+        public Object(int idObject, int typeObject, decimal priceObject, int? numRoomsObject, string livingAreaObject, string plotAreaObject, int? floorObject, int idSobObject, string cityObject, string districtObject, string addressObject, string imagesObject, Client idSobObjectNavigation, Typeobject typeObjectNavigation, ICollection<Contract> contracts, ICollection<FavoriteClientObject> favoriteClientObjects)
         {
             IdObject = idObject;
             TypeObject = typeObject;
@@ -46,6 +48,7 @@ namespace GH.Model
             IdSobObjectNavigation = idSobObjectNavigation;
             TypeObjectNavigation = typeObjectNavigation;
             Contracts = contracts;
+            FavoriteClientObjects = favoriteClientObjects;
         }
     }
 }

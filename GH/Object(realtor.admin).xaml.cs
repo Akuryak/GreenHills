@@ -23,13 +23,15 @@ namespace GH
     public partial class Object_realtor : Page
     {
         public static staff Staff { get; set; }
+        public static Client Client { get; set; }
         public static List<Model.Object> Objects { get; set; }
-        public Object_realtor(staff staff, List<Model.Object> objects)
+        public Object_realtor(staff staff, Client client, List<Model.Object> objects)
         {
             InitializeComponent();
 
             Staff = staff;
             Objects = objects;
+            Client = client;
         }
 
         public void Refresh()
@@ -41,7 +43,36 @@ namespace GH
 
             foreach (Model.Object @object in Objects)
             {
-                ObjectsListBox.Items.Add(new UserControls.ObjectInfoUserControl(@object));
+                if (Staff != null)
+                    ObjectsListBox.Items.Add(new UserControls.ObjectInfoUserControl(@object));
+                else if (Client != null)
+                {
+                    UserControls.ClientObjectUserControl clientObjectUserControl = new UserControls.ClientObjectUserControl(Client, @object);
+                    clientObjectUserControl.ButtonClick += ClientObjectUserControl_ButtonClick;
+                    ObjectsListBox.Items.Add(clientObjectUserControl);
+                }
+            }
+        }
+        private void ClientObjectUserControl_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (ObjectsListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите объект, а затем нажмите кнопку \"Добавить в избранное\"", "Уведомление");
+                return;
+            }
+
+            if ((Model.Object)((UserControls.ClientObjectUserControl)ObjectsListBox.SelectedItem).DataContext != null && Client != null)
+            {
+                if (App.Context.FavoriteClientObjects.ToList().FirstOrDefault(x => x.ClientNavigation.IdClient == Client.IdClient && x.ObjectNavigation.IdObject == ((Model.Object)((UserControls.ClientObjectUserControl)ObjectsListBox.SelectedItem).DataContext).IdObject) != null)
+                {
+                    MessageBox.Show("Вы уже добавили объект в избранное", "Уведомление");
+                    return;
+                }
+
+                App.Context.FavoriteClientObjects.Add(new FavoriteClientObject(App.Context.FavoriteClientObjects.ToList().Count == 0 ? 1 : App.Context.FavoriteClientObjects.ToList().Max(x => x.Id) + 1, ((Model.Object)((UserControls.ClientObjectUserControl)ObjectsListBox.SelectedItem).DataContext).IdObject, Client.IdClient, null, null));
+                App.Context.SaveChanges();
+
+                MessageBox.Show("Вы успешно добавили объект в избранное", "Уведомление");
             }
         }
 
@@ -52,7 +83,7 @@ namespace GH
 
         private void filter_button_Click(object sender, RoutedEventArgs e)
         {
-            PageManagerClass.MainFrame.Navigate(new FilterObjectPage(Staff));
+            PageManagerClass.MainFrame.Navigate(new FilterObjectPage(Staff, Client));
         }
 
         private void addObject_button_Click(object sender, RoutedEventArgs e)
@@ -71,14 +102,20 @@ namespace GH
 
                     MessageBox.Show("Вы успешно удалили объект", "Уведомление");
 
-                    PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, App.Context.Objects.ToList()));
+                    PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, Client, App.Context.Objects.ToList()));
                 }
             }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            nameuser.Content = Staff.FullName;
+            nameuser.Content = Staff == null ? $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}" : Staff.FullName;
+
+            if (Staff == null && Client != null)
+            {
+                addObject_button.Visibility = Visibility.Collapsed;
+                deliteObject_button.Visibility = Visibility.Collapsed;
+            }
 
             Refresh();
         }

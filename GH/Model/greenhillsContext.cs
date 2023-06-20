@@ -6,19 +6,20 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace GH.Model
 {
-    public partial class greenHillsContext : DbContext
+    public partial class greenhillsContext : DbContext
     {
-        public greenHillsContext()
+        public greenhillsContext()
         {
         }
 
-        public greenHillsContext(DbContextOptions<greenHillsContext> options)
+        public greenhillsContext(DbContextOptions<greenhillsContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Contract> Contracts { get; set; }
+        public virtual DbSet<FavoriteClientObject> FavoriteClientObjects { get; set; }
         public virtual DbSet<Object> Objects { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Typecontract> Typecontracts { get; set; }
@@ -30,7 +31,7 @@ namespace GH.Model
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseLazyLoadingProxies().UseMySql("server=localhost;database=greenHills;user=root;password=12345", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.31-mysql"));
+                optionsBuilder.UseLazyLoadingProxies().UseMySql("server=localhost;database=greenhills;user=root;password=12345", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.31-mysql"));
             }
         }
 
@@ -153,6 +154,29 @@ namespace GH.Model
                     .HasForeignKey(d => d.TypeContract)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("typecon");
+            });
+
+            modelBuilder.Entity<FavoriteClientObject>(entity =>
+            {
+                entity.ToTable("favorite_client_objects");
+
+                entity.HasIndex(e => e.Client, "Client_idx");
+
+                entity.HasIndex(e => e.Object, "Object_idx");
+
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.ClientNavigation)
+                    .WithMany(p => p.FavoriteClientObjects)
+                    .HasForeignKey(d => d.Client)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("Client");
+
+                entity.HasOne(d => d.ObjectNavigation)
+                    .WithMany(p => p.FavoriteClientObjects)
+                    .HasForeignKey(d => d.Object)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("Object");
             });
 
             modelBuilder.Entity<Object>(entity =>

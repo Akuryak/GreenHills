@@ -56,7 +56,7 @@ namespace GH
                 MessageBox.Show("Заполните все поля", "Ошибка");
                 return;
             }
-            string phone = phone_textBox.Text.Replace("-", "").Replace("_", "").Replace("(", "").Replace(")", "").Replace(" ", "");
+            string phone = phone_textBox.Text.Replace("-", "").Replace("_", "").Replace("(", "").Replace(")", "").Replace(" ", "").Replace("+", "");
             if (!decimal.TryParse(phone, out decimal phoneNumber))
             {
                 MessageBox.Show("Введите корректный номер телефона", "Ошибка");
@@ -99,11 +99,11 @@ namespace GH
                 switch (client.Role)
                 {
                     case 3:
-                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_(staff));
+                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_(staff, client));
                         break;
 
                     case 4:
-                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_(staff));
+                        PageManagerClass.MainFrame.Navigate(new Client_cabinet_(staff, client));
                         break;
 
                     default:

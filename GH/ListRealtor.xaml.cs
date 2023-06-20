@@ -23,21 +23,32 @@ namespace GH
     public partial class ListRealtor : Page
     {
         public static staff Staff { get; set; }
-        public ListRealtor(staff staff)
+        public static Client Client { get; set; }
+        public ListRealtor(staff staff, Client client)
         {
             InitializeComponent();
             Staff = staff;
+            Client = client;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (Staff.RoleStaff != 1)
+            if (Staff != null)
+            {
+                if (Staff.RoleStaff != 1)
+                {
+                    addrealtor_button.Visibility = Visibility.Collapsed;
+                    deliterealtor_button.Visibility = Visibility.Collapsed;
+                }
+            }
+
+            nameuser.Content = Staff == null ? $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}" : Staff.FullName;
+
+            if (Client != null && Staff == null)
             {
                 addrealtor_button.Visibility = Visibility.Collapsed;
                 deliterealtor_button.Visibility = Visibility.Collapsed;
             }
-
-            nameuser.Content = Staff.FullName;
 
             Refresh();
         }

@@ -13,6 +13,7 @@ namespace GH
     /// </summary>
     public partial class App : Application
     {
-        public static Model.greenHillsContext Context { get; private set; } = new Model.greenHillsContext();
+        public static Model.greenhillsContext Context { get; private set; } = new Model.greenhillsContext();
+        //Scaffold-DbContext "Server=localhost;Database=greenhills;User=root;Password=12345" "Pomelo.EntityFrameworkCore.MySql" -outputdir Model -context greenhillsContext -f
     }
 }

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
       d:DesignHeight="610" d:DesignWidth="510"
-      Title="PersonalDoc" Background="#D9D9D9">
+      Title="PersonalDoc" Background="#D9D9D9" Loaded="Page_Loaded">
 
         <Grid>
             <Grid.RowDefinitions>
@@ -14,13 +14,16 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="80"/>
-            <RowDefinition Height="250"/>
+            <RowDefinition Height="400"/>
         </Grid.RowDefinitions>
             <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#50CE3B" Opacity="0.10"/>
             <Label Content="Документы" Grid.ColumnSpan="2" FontSize="35" Foreground="#3C9755" Margin="10,0,0,0" Grid.Row="1"/>
             <Image Source="\Resourses\nameuser.png" Grid.Row="1" Margin="130,18,100,18"/>
             <Label x:Name="nameuser" Grid.Row="1" Margin="290,18,10,18" Content="Шакирова Эвелина" FontSize="18"/>
-        <Grid Grid.Row="3" Grid.ColumnSpan="2" Background="#C8C6C6"  Margin="10"/>
-        <Label Content="Количество документов" Grid.Row="3" Margin="10,20,250,20" FontSize="20"/> <!--подсчет заключенных договоров с клиентов и их вывод-->
-        </Grid>
+            <Grid Grid.Row="3" Grid.ColumnSpan="2" Background="#C8C6C6"  Margin="10"/>
+            <Label x:Name="UsernameLable" Content="Количество документов" Grid.Row="3" Margin="10,20,250,20" FontSize="20"/> <!--подсчет заключенных договоров с клиентов и их вывод-->
+            <TextBlock x:Name="CountDocumentsTextBlock" Text="0" Grid.Row="3" FontSize="20" HorizontalAlignment="Right" Margin="0,0,50,0" VerticalAlignment="Center"/>
+
+        <ListBox x:Name="ContactsClientListBox" Grid.Row="4" Margin="10" HorizontalContentAlignment="Stretch"/>
+    </Grid>
 </Page>
