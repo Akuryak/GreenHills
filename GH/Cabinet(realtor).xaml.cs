@@ -32,9 +32,9 @@ namespace GH
         {
             nameuser.Content = Staff.FullName;
 
-            ClientsCountTextBlock.Text = App.Context.Clients.ToList().Count.ToString();
-            ObjectsCountTextBlock.Text = App.Context.Objects.ToList().Count.ToString();
-            DocumentsCountTextBlock.Text = App.Context.Contracts.ToList().Count.ToString();
+            ClientsCountTextBlock.Text = (App.Context.Contracts.ToList().Where(x => x.IdStaffContract == Staff.IdStaff).Count() * 2).ToString();
+            ObjectsCountTextBlock.Text = App.Context.Contracts.ToList().Where(x => x.IdStaffContract == Staff.IdStaff).Count().ToString();
+            DocumentsCountTextBlock.Text = App.Context.Contracts.ToList().Where(x => x.IdStaffContract == Staff.IdStaff).Count().ToString();
         }
     }
 }

@@ -40,6 +40,8 @@ namespace GH
 
             if (!string.IsNullOrWhiteSpace(search_textbox.Text))
                 Objects = Objects.Where(x => $"{x.CityObject} {x.DistrictObject} {x.AddressObject}".Contains(search_textbox.Text)).ToList();
+            else
+                Objects = App.Context.Objects.ToList();
 
             foreach (Model.Object @object in Objects)
             {
