@@ -30,7 +30,7 @@ namespace GH
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            nameuser.Content = Staff.FullName;
+            nameuser.Content = $"{Staff.SurnameStaff} {Staff.NameStaff}";
 
             ClientsCountTextBlock.Text = (App.Context.Contracts.ToList().Where(x => x.IdStaffContract == Staff.IdStaff).Count() * 2).ToString();
             ObjectsCountTextBlock.Text = App.Context.Contracts.ToList().Where(x => x.IdStaffContract == Staff.IdStaff).Count().ToString();

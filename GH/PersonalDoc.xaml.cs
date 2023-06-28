@@ -30,7 +30,7 @@ namespace GH
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            UsernameLable.Content = $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}";
+            UsernameLable.Content = $"{Client.SurnameClient} {Client.NameClient}";
 
             CountDocumentsTextBlock.Text = App.Context.Contracts.ToList().Where(x => x.IdByerContract == Client.IdClient || x.IdStaffContract == Client.IdClient).Count().ToString();
 

@@ -82,7 +82,7 @@ namespace GH
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            nameuser.Content = Staff.FullName;
+            nameuser.Content = $"{Staff.SurnameStaff} {Staff.NameStaff}";
         }
     }
 }

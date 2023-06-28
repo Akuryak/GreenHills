@@ -42,7 +42,7 @@ namespace GH
                 }
             }
 
-            nameuser.Content = Staff == null ? $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}" : Staff.FullName;
+            nameuser.Content = Staff == null ? $"{Client.SurnameClient} {Client.NameClient}" : $"{Staff.SurnameStaff} {Staff.NameStaff}";
 
             if (Client != null && Staff == null)
             {

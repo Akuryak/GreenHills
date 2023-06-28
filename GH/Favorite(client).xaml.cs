@@ -50,7 +50,7 @@ namespace GH
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            UsernameLable.Content = $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}";
+            UsernameLable.Content = $"{Client.SurnameClient} {Client.NameClient}";
 
             if (App.Context.FavoriteClientObjects.ToList().Where(x => x.ClientNavigation.IdClient == Client.IdClient).Count() <= 0)
             {

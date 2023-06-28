@@ -213,7 +213,7 @@ namespace GH {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GH;V1.0.0.0;component/filterobjectpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GH;component/filterobjectpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FilterObjectPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -168,7 +168,7 @@ namespace GH
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            nameuser.Content = Staff == null ? $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}" : Staff.FullName;
+            nameuser.Content = Staff == null ? $"{Client.SurnameClient} {Client.NameClient}" : $"{Staff.SurnameStaff} {Staff.NameStaff}";
         }
     }
 }

@@ -43,7 +43,7 @@ namespace GH
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             if (Staff != null)
-                nameuser.Content = Staff.FullName;
+                nameuser.Content = $"{Staff.SurnameStaff} {Staff.NameStaff}";
             else if (Client != null)
                 nameuser.Content = $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}";
 

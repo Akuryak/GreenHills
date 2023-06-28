@@ -75,7 +75,7 @@ namespace GH
                 Realtor_combobox.Items.Add(item);
             }
 
-            nameuser.Content = Staff.FullName;
+            nameuser.Content = $"{Staff.SurnameStaff} {Staff.NameStaff}";
 
             Refresh();
         }
