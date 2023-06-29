@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GH"
        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
-      d:DesignHeight="580" d:DesignWidth="500"
+      d:DesignHeight="630" d:DesignWidth="650"
       Title="RegistrationPage" Background="#D9D9D9">
 
     <Grid>
@@ -41,8 +41,8 @@
         <Label Content="серия/№ паспорта:" Grid.Row="6" FontSize="15" Grid.ColumnSpan="2"/>
         <TextBox x:Name="Requisites_textbox" Grid.Row="6" Grid.ColumnSpan="3" Background="#D9D9D9" BorderBrush="Black" Margin="150,0,5,7"/>
         <Label Content="Номер телефона:" Grid.Row="7" FontSize="15" Grid.ColumnSpan="2"/>
-        <xctk:MaskedTextBox Mask="8(000)000-0000" x:Name="Phone_textBox" Grid.Row="7" Grid.ColumnSpan="3" Margin="140,0,5,7" Background="#D9D9D9" BorderBrush="Black" />
-        
+        <xctk:MaskedTextBox Mask="+0(000)000-00-00" x:Name="Phone_textBox" Grid.Row="7" Grid.ColumnSpan="3" Margin="140,0,5,7" Background="#D9D9D9" BorderBrush="Black" />
+
         <Label Content="Пароль:" Grid.Row="8" FontSize="15"/>
         <PasswordBox x:Name="password_Box" Grid.Row="8" Grid.Column="0" Margin="140,0,0,7" Background="#D9D9D9" BorderBrush="Black"/>
         <TextBox x:Name="password_textBox" Grid.Row="8" Grid.Column="0" Visibility="Hidden" Margin="140,0,0,7" Background="#D9D9D9" BorderBrush="Black"/>
@@ -62,12 +62,19 @@
             </Button.Resources>
             <Image Source="\Resourses\eye.png"/>
         </Button>
-        
+
         <Label Content="E-mail:" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"/>
         <TextBox x:Name="Email_textbox" Grid.Row="9" Grid.ColumnSpan="3" Background="#D9D9D9" BorderBrush="Black" Margin="100,0,5,7"/>
-        <Button Content="Регистрация" Name="RegButton" Grid.Row="10" Grid.ColumnSpan="3" Background="DarkSeaGreen" Margin="100,0,100,0" FontSize="23" Click="RegButton_Click">
+        <Button Content="Регистрация" Name="RegButton" Grid.Row="10" Background="DarkSeaGreen" Margin="42,0,75,0" FontSize="23" Click="RegButton_Click">
             <Button.Resources>
                 <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Отменить регистрацию" x:Name="noreg_button" Grid.Row="10" Grid.ColumnSpan="3" Background="DarkSeaGreen" Margin="354,0,10,0" FontSize="23" Click="noreg_button_Click" Height="40" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>

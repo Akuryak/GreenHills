@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GH"
         mc:Ignorable="d"
         Icon="Resourses\icon.png"
-        Title="Green Hills" Height="630" Width="600" Background="#D9D9D9" Loaded="Window_Loaded">
+        Title="Green Hills" Height="630" Width="650" Background="#D9D9D9" Loaded="Window_Loaded">
     <Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>

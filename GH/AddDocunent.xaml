@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
-      d:DesignHeight="610" d:DesignWidth="510"
+      d:DesignHeight="630" d:DesignWidth="560"
       Title="AddDocunent" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
@@ -22,13 +22,13 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#50CE3B" Opacity="0.10"/>
         <Label Content="Документы" Grid.ColumnSpan="2" FontSize="35" Foreground="#3C9755" Margin="10,0,0,0" Grid.Row="0"/>
-        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="130,18,100,18" Grid.ColumnSpan="2"/>
-        <Label x:Name="nameuser" Grid.Row="0" Margin="290,18,10,18" Content="Шакирова Эвелина" FontSize="18" Grid.ColumnSpan="2"/>
+        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="262,18,257,18" RenderTransformOrigin="3.327,0.624" Grid.ColumnSpan="2"/>
+        <Label x:Name="nameuser" Grid.Row="0" Margin="34,18,10,18" Content="Шакирова Эвелина" FontSize="18" Grid.Column="1"/>
         <Grid Grid.Row="3"  Background="White" Opacity="0.5" Margin="15" Grid.ColumnSpan="2"/>
 
         <Label Content="Тип договора:" Grid.Row="2" FontSize="15"/>
-        <Button Grid.Row="2" Margin="10,27,130,10" Background="#99CE86" BorderBrush="#3C9755" Content="Договор купли" FontSize="15" x:Name="buyerDoc_button" Click="buyerDoc_button_Click" />
-        <Button Grid.Row="2" Margin="140,27,-20,10" Background="#99CE86" BorderBrush="#3C9755" Content="Договор продажи" FontSize="15" x:Name="sobDoc_button" Click="sobDoc_button_Click"/>
+        <Button Grid.Row="2" Margin="10,27,145,10" Background="#99CE86" BorderBrush="#3C9755" Content="Договор купли" FontSize="15" x:Name="buyerDoc_button" Click="buyerDoc_button_Click" />
+        <Button Grid.Row="2" Margin="165,27,260,10" Background="#99CE86" BorderBrush="#3C9755" Content="Договор продажи" FontSize="15" x:Name="sobDoc_button" Click="sobDoc_button_Click" Grid.ColumnSpan="2"/>
         <Label Content="Покупатель:" Grid.Row="3" Grid.Column="0" Margin="15,27,150,160"/>
         <TextBox x:Name="Byer_textbox" Grid.Row="3" Grid.Column="0" Margin="100,30,40,170"/>
         <Label Content="Собственник:" Grid.Row="3" Grid.Column="0" Margin="15,60,135,130"/>
@@ -39,10 +39,10 @@
         <DatePicker x:Name="dateConclusion_data" Grid.Row="3" Grid.Column="1" Margin="130,30,30,170"/>
         <Label Content="Срок действия до:" Grid.Row="3" Grid.Column="1" Margin="15,60,120,130"/>
         <DatePicker x:Name="validUntil_data" Grid.Row="3" Grid.Column="1" Margin="130,63,30,135"/>
-        
 
 
-        <Button Name="addDoc_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="170,15,180,170" Click="addDoc_button_Click">
+
+        <Button Name="addDoc_button" Grid.Row="4"  Background="#99CE86" BorderBrush="#3C9755" Margin="10,15,79,170" Click="addDoc_button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -53,7 +53,7 @@
                 <Image Source="\Resourses\addob(add).png" Height="25" Width="32"/>
             </StackPanel>
         </Button>
-        <Button Name="clear_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="340,15,10,170" Click="clear_button_Click">
+        <Button Name="clear_button" Grid.Row="4"  Background="#99CE86" BorderBrush="#3C9755" Margin="103,15,18,170" Click="clear_button_Click" Grid.Column="1">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -62,6 +62,17 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Очистить поля</TextBlock>
                 <Image Source="\Resourses\delete(add).png" Height="24" Width="32"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="GoBackButton" Grid.Row="4"  Background="#99CE86" BorderBrush="#3C9755" Margin="206,15,182,170" Click="GoBackButton_Click" Grid.ColumnSpan="2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Отменить"/></TextBlock>
+                <Image Source="/Resourses/delete(add).png" Height="24" Width="32"/>
             </StackPanel>
         </Button>
     </Grid>

@@ -66,5 +66,10 @@ namespace GH
 
             PageManagerClass.MainFrame.Navigate(new MainPage());
         }
+
+        private void noreg_button_Click(object sender, RoutedEventArgs e)
+        {
+            PageManagerClass.MainFrame.Navigate(new ComePage());
+        }
     }
 }

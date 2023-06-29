@@ -163,7 +163,7 @@ namespace GH
 
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
-            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, null, App.Context.Objects.ToList()));
+            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, Client, App.Context.Objects.ToList()));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

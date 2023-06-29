@@ -63,12 +63,17 @@ namespace GH
 
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
-            PageManagerClass.MainFrame.Navigate(new AddClient_realtor_(Staff));
+           PageManagerClass.MainFrame.Navigate(new AddClient_realtor_(Staff));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             nameuser.Content = $"{Staff.SurnameStaff} {Staff.NameStaff}";
+        }
+
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            PageManagerClass.MainFrame.Navigate(new Client_realtor(Staff));
         }
     }
 }

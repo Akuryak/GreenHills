@@ -6,7 +6,7 @@
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
-      d:DesignHeight="610" d:DesignWidth="510"
+      d:DesignHeight="630" d:DesignWidth="560"
       Title="AddRealtor_admin_" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
@@ -23,8 +23,8 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#50CE3B" Opacity="0.10"/>
         <Label Content="Риэлторы" Grid.ColumnSpan="2" FontSize="35" Foreground="#3C9755" Margin="10,0,0,0" Grid.Row="0"/>
-        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="130,18,100,18" Grid.ColumnSpan="2"/>
-        <Label x:Name="nameuser" Grid.Row="0" Margin="290,18,10,18" Content="Шакирова Эвелина" FontSize="18" Grid.ColumnSpan="2"/>
+        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="239,18,273,18" Grid.ColumnSpan="2"/>
+        <Label x:Name="nameuser" Grid.Row="0" Margin="40,18,10,18" Content="Шакирова Эвелина" FontSize="18" Grid.Column="1"/>
         <Grid Grid.Row="3"  Background="White" Opacity="0.5" Margin="15" Grid.ColumnSpan="2"/>
         <Label Content="Фамилия:" Grid.Row="3" Grid.Column="0" Margin="15,27,150,160"/>
         <TextBox x:Name="surname_textbox" Grid.Row="3" Grid.Column="0" Margin="90,30,40,170"/>
@@ -40,10 +40,10 @@
         <TextBox x:Name="requisites_textbox" Grid.Row="3" Grid.Column="1" Margin="130,63,30,135"/>
         <Label Content="E-mail:" Grid.Row="3" Grid.Column="1" Margin="15,90,100,100"/>
         <TextBox x:Name="email_textbox" Grid.Row="3" Grid.Column="1" Margin="80,95,60,105"/>
-        
 
 
-        <Button Name="addrealtor_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="170,15,180,170" Click="addrealtor_button_Click" >
+
+        <Button Name="addrealtor_button" Grid.Row="4"  Background="#99CE86" BorderBrush="#3C9755" Margin="15,10,102,175" Click="addrealtor_button_Click" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -54,7 +54,7 @@
                 <Image Source="\Resourses\addob(add).png" Height="25" Width="32"/>
             </StackPanel>
         </Button>
-        <Button Name="clear_button" Grid.Row="4"  Background="#99CE86" Grid.ColumnSpan="2" BorderBrush="#3C9755" Margin="340,15,10,170" Click="clear_button_Click">
+        <Button Name="clear_button" Grid.Row="4"  Background="#99CE86" BorderBrush="#3C9755" Margin="97,10,10,175" Click="clear_button_Click" Grid.Column="1">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -63,6 +63,17 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Очистить поля</TextBlock>
                 <Image Source="\Resourses\delete(add).png" Height="24" Width="32"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="GoBackButton" Grid.Row="4"  Background="#99CE86" BorderBrush="#3C9755" Margin="194,10,194,175" Click="GoBackButton_Click" Grid.ColumnSpan="2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Отменить"/></TextBlock>
+                <Image Source="/Resourses/delete(add).png" Height="24" Width="32"/>
             </StackPanel>
         </Button>
     </Grid>

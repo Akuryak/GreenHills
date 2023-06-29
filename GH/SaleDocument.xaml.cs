@@ -45,7 +45,7 @@ namespace GH
             if (Staff != null)
                 nameuser.Content = $"{Staff.SurnameStaff} {Staff.NameStaff}";
             else if (Client != null)
-                nameuser.Content = $"{Client.SurnameClient} {Client.NameClient} {Client.PatronymicClient}";
+                nameuser.Content = $"{Client.SurnameClient} {Client.NameClient}";
 
             number_label.Content = Contract.IdContract;
             city_label.Content = Contract.IdObjectContractNavigation.CityObject;

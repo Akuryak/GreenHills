@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
-      d:DesignHeight="610" d:DesignWidth="510"
+      d:DesignHeight="630" d:DesignWidth="560"
       Title="Client_realtor" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
@@ -19,11 +19,11 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#50CE3B" Opacity="0.10"/>
         <Label Content="Клиенты" Grid.ColumnSpan="2" FontSize="35" Foreground="#3C9755" Margin="10,0,0,0" Grid.Row="0"/>
-        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="130,18,100,18"/>
+        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="247,18,271,18" RenderTransformOrigin="1.386,0.629"/>
         <Label x:Name="nameuser" Grid.Row="0" Margin="290,18,10,18" Content="Шакирова Эвелина" FontSize="18"/>
-        <TextBox x:Name="search_textbox" Grid.Row="2" Margin="10,0,190,1" BorderBrush="Black" Background="#C8C6C6"/>
+        <TextBox x:Name="search_textbox" Grid.Row="2" Margin="10,0,235,1" BorderBrush="Black" Background="#C8C6C6"/>
 
-        <Button Name="search_button"  Background="Transparent" Grid.Row="2" Margin="330,0,140,0" BorderBrush="Black" Click="search_button_Click" >
+        <Button Name="search_button"  Background="Transparent" Grid.Row="2" Margin="330,0,185,0" BorderBrush="Black" Click="search_button_Click" >
             <Image Source="\Resourses\search.png" Height="25" Width="38"/>
         </Button>
 
@@ -33,7 +33,7 @@
             <ComboBoxItem Content="Собственник"/>
         </ComboBox>
 
-        <Button Name="addClient_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="10,5,340,0" Click="addClient_button_Click" >
+        <Button Name="addClient_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="10,5,353,0" Click="addClient_button_Click" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -44,7 +44,7 @@
                 <Image Source="\Resourses\addClient.png" Height="27" Width="47"/>
             </StackPanel>
         </Button>
-        <Button Name="deliteClient_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="190,5,135,0" Click="deliteClient_button_Click" >
+        <Button Name="deliteClient_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="225,5,135,0" Click="deliteClient_button_Click" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -56,7 +56,7 @@
             </StackPanel>
         </Button>
 
-        <ListBox x:Name="ClientListBox" Grid.Row="5" Margin="10" HorizontalContentAlignment="Stretch"/>
+        <ListBox x:Name="ClientListBox" Grid.Row="5" Margin="10,10,10,-25" HorizontalContentAlignment="Stretch"/>
     </Grid>
 </Page>
 

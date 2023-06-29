@@ -6,7 +6,7 @@
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
-      d:DesignHeight="580" d:DesignWidth="500"
+      d:DesignHeight="630" d:DesignWidth="650"
       Title="ComePage" Background="#D9D9D9">
 
     <Grid>

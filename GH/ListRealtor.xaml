@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
-      d:DesignHeight="610" d:DesignWidth="510"
+      d:DesignHeight="630" d:DesignWidth="560"
       Title="ListRealtor" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
@@ -19,16 +19,16 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#50CE3B" Opacity="0.10"/>
         <Label Content="Риэлторы" Grid.ColumnSpan="2" FontSize="35" Foreground="#3C9755" Margin="10,0,0,0" Grid.Row="0"/>
-        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="130,18,100,18"/>
+        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="240,18,274,18"/>
         <Label x:Name="nameuser" Grid.Row="0" Margin="290,18,10,18" Content="Шакирова Эвелина" FontSize="18"/>
         <TextBox x:Name="search_textbox" Grid.Row="2" Margin="10,0,100,1" BorderBrush="Black" Background="#C8C6C6"/>
 
-        <Button Name="search_button"  Background="Transparent" Grid.Row="2" Margin="420,0,50,0" BorderBrush="Black" Click="search_button_Click">
+        <Button Name="search_button"  Background="Transparent" Grid.Row="2" Margin="465,0,50,0" BorderBrush="Black" Click="search_button_Click">
             <Image Source="\Resourses\search.png" Height="25" Width="38"/>
         </Button>
 
 
-        <Button Name="addrealtor_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="10,5,340,0" Click="addrealtor_button_Click">
+        <Button Name="addrealtor_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="10,5,359,0" Click="addrealtor_button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -39,7 +39,7 @@
                 <Image Source="\Resourses\addClient.png" Height="23" Width="40"/>
             </StackPanel>
         </Button>
-        <Button Name="deliterealtor_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="190,5,135,0" Click="deliterealtor_button_Click" >
+        <Button Name="deliterealtor_button" Grid.Row="3"  Background="#99CE86" BorderBrush="#3C9755" Margin="246,5,135,0" Click="deliterealtor_button_Click" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

@@ -179,5 +179,10 @@ namespace GH
         {
             nameuser.Content = $"{Staff.SurnameStaff} {Staff.NameStaff}";
         }
+
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            PageManagerClass.MainFrame.Navigate(new Object_realtor(Staff, null, App.Context.Objects.ToList()));
+        }
     }
 }

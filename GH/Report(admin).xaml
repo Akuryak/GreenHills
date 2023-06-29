@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
-      d:DesignHeight="610" d:DesignWidth="510"
+      d:DesignHeight="630" d:DesignWidth="560"
       Title="Report_admin_" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
@@ -25,12 +25,12 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0" Grid.ColumnSpan="4" Background="#50CE3B" Opacity="0.10"/>
         <Label Content="Отчеты" Grid.ColumnSpan="3" FontSize="35" Foreground="#3C9755" Margin="10,0,0,0" Grid.Row="0"/>
-        <Image Source="\Resourses\nameuser.png" Grid.ColumnSpan="4" Grid.Row="0" Margin="130,18,100,18"/>
+        <Image Source="\Resourses\nameuser.png" Grid.Row="0" Margin="90,18,4,18" Grid.Column="1"/>
         <Label x:Name="nameuser" Grid.Row="0" Margin="290,18,10,18" Grid.ColumnSpan="4" Content="Шакирова Эвелина" FontSize="18"/>
         <Label Content="Отчеты о сделках с:" Grid.ColumnSpan="2" Grid.Row="2" FontSize="14"/>
         <DatePicker x:Name="StartDatePicker" Grid.Row="2" Grid.Column="1" Margin="5" SelectedDateChanged="StartDatePicker_SelectedDateChanged"/>
         <Label Content="по:" Grid.Column="2" Grid.Row="2" FontSize="14"/>
-        <DatePicker x:Name="EndDatePicker" Grid.Row="2" Grid.ColumnSpan="4" Margin="285,5,100,5" SelectedDateChanged="EndDatePicker_SelectedDateChanged"/>
+        <DatePicker x:Name="EndDatePicker" Grid.Row="2" Grid.ColumnSpan="2" Margin="35,5,70,5" SelectedDateChanged="EndDatePicker_SelectedDateChanged" Grid.Column="2"/>
         <ComboBox x:Name="Realtor_combobox" Grid.Row="3" Grid.ColumnSpan="2" Margin="5" SelectedIndex="0" SelectionChanged="Realtor_combobox_SelectionChanged">
             <ComboBoxItem>
                 <TextBlock Text="Вывод всех диапозонов"/>

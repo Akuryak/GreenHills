@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GH"
       mc:Ignorable="d" 
-      d:DesignHeight="610" d:DesignWidth="510"
+      d:DesignHeight="630" d:DesignWidth="560"
       Title="Favorite_client_" Background="#D9D9D9" Loaded="Page_Loaded">
 
     <Grid>
@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#50CE3B" Opacity="0.10"/>
         <Label Content="Избранные объекты" Grid.ColumnSpan="2" FontSize="22" Foreground="#3C9755" Margin="10,13,0,0" Grid.Row="1"/>
-        <Image Source="\Resourses\nameuser.png" Grid.Row="1" Margin="130,18,100,18"/>
+        <Image Source="\Resourses\nameuser.png" Grid.Row="1" Margin="250,18,264,18"/>
         <Label x:Name="UsernameLable" Grid.Row="1" Margin="290,18,10,18" Content="Шакирова Эвелина" FontSize="18"/>
 
         <Button Name="trash_button" Grid.Row="4" Margin="436,0,0,0" Background="Transparent" BorderBrush="Transparent" Click="trash_button_Click">
